@@ -1,6 +1,6 @@
-# Cybersecurity-Bootcamp
-## Automated ELK Stack Deployment
-The files in this repository were used to configure the network depicted below.
+# Elasticsearch Logstash Kibana (ELK) Stack Project
+## Automated (ELK) Stack Deployment
+The files in this repository were used to configure the network depicted below:
 
 ![Network Diagram](Diagrams/Project-1-Network-Diagram.png)
 
