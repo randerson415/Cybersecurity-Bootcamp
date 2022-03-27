@@ -2,7 +2,7 @@
 ## Automated (ELK) Stack Deployment
 The files in this repository were used to configure the network depicted below:
 
-![Network Diagram](Diagrams/Project-1-Network-Diagram.png)
+![Network Diagram](Images/Network_Diagram.png)
 
 These files have been tested and used to generate a live ELK deployment on Microsoft Azure. They can be used to either recreate the entire deployment pictured above, or alternatively, select YAML (.yml) files may be used to install only certain pieces of it.
 
@@ -60,7 +60,7 @@ The playbook implements the following tasks:
 - Configure the ELK container with port mappings
 - Start the ELK container and enable the docker service on boot
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
--![docker ps](Diagrams/docker_ps_output.png)
+-![docker ps](Images/docker_ps.png)
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
 - Web-1: 10.0.0.5
