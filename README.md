@@ -6,9 +6,11 @@ The files in this repository were used to configure the network depicted below.
 
 These files have been tested and used to generate a live ELK deployment on Microsoft Azure. They can be used to either recreate the entire deployment pictured above, or alternatively, select YAML (.yml) files may be used to install only certain pieces of it.
 
--	![ELK Playbook](Ansible/install-elk.yml)
--	![Filebeat Playbook](Ansible/filebeat-playbook.yml)
--	![Metricbeat Playbook](/Ansible/metricbeat-playbook.yml)
+- [ELK Playbook](Ansible/install-elk.yml)
+
+- [Filebeat Playbook](Ansible/filebeat-playbook.yml)
+ 
+- [Metricbeat Playbook](/Ansible/metricbeat-playbook.yml)
 
 This document contains the following details:
 - Description of the Topology
@@ -31,7 +33,8 @@ The configuration details of each machine may be found below.
 | Jump Box   | Gateway    | 10.0.0.4   | Linux            |
 | Web-1      | Web Server | 10.0.0.5   | Linux            |
 | Web-2      | Web Server | 10.0.0.6   | Linux            |
-| Elk-Server | Elk Stack  | 10.1.0.4   | Linux            | 
+| Elk-Server | Elk Stack  | 10.1.0.4   | Linux            |
+
 ### Access Policies
 The machines on the internal network are not exposed to the public Internet. 
 Only the Jump Box machine can accept connections from the Internet. Access to this machine is only allowed from the following IP address:
@@ -46,6 +49,7 @@ A summary of the access policies in place can be found in the table below.
 | Web-1      | No                  | 10.0.0.4             |
 | Web-2      | No                  | 10.0.0.4             |
 | Elk-Server | No                  | 10.0.0.4             |
+
 ### Elk Configuration
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
 - What is the main advantage of automating configuration with Ansible? The main advantage of automating configuration with Ansible is that it will ensure that provisioning scripts run identically everywhere and that automated configurations will do exactly the same thing every time they run, eliminating as much variability between configurations as possible.
@@ -75,12 +79,12 @@ In order to use the playbook, you will need to have an Ansible control node alre
 SSH into the control node and follow the steps below:
 - Copy the Filebeat configuration file (filebeat-config.yml) and Metricbeat configuration file (metricbeat-confg.yml) to the Ansible container (/etc/ansible/files).
 - Update the Filebeat and Metricbeat configuration files to include:
-- output.elasticsearch:
-hosts: [“10.1.0.4:9200”]
-username: “elastic”
-password: “changeme”
--setup.kibana
-host: “10.1.0.4:5601” 
+  - output.elasticsearch:
+    - hosts: [“10.1.0.4:9200”]
+    - username: “elastic”
+    - password: “changeme”
+  - setup.kibana
+    - host: “10.1.0.4:5601” 
 - Run the playbook and navigate to http://20.230.203.126:5601/app/kibana to check that the installation worked as expected.
 - Answer the following questions to fill in the blanks:
 - Which file is the playbook? The playbook for Filebeat is filebeat-playbook.yml and the playbook for Metricbeat is metricbeat-playbook.yml.
