@@ -32,20 +32,20 @@ The configuration details of each VM are in the table below:
 
 | Name       | Function   | IP Address | Operating System |
 |------------|------------|------------|------------------|
-| Jump Box   | Gateway    | 10.0.0.4   | Linux            |
+| Jump-Box   | Gateway    | 10.0.0.4   | Linux            |
 | Web-1      | Web Server | 10.0.0.5   | Linux            |
 | Web-2      | Web Server | 10.0.0.6   | Linux            |
 | ELK-Server | Elk Stack  | 10.1.0.4   | Linux            |
 
 ### Access Policies
 
-The VMs on the internal network are not exposed to the public Internet. Only the Jump Box can accept connections from the Internet. Access to the Jump Box is only allowed from the IP address, 67.163.75.32.
+The VMs on the internal network are not exposed to the public Internet. Only the Jump-Box can accept connections from the Internet. Access to the Jump-Box is only allowed from the IP address, 67.163.75.32.
 
-The VMs, including the ELK-Server, in the network can only be accessed through Secure Shell Protocol (SSH) from the Jump Box, which has an IP address of 10.0.0.4. The access policies are in the table below:
+The VMs, including the ELK-Server, in the network can only be accessed through Secure Shell Protocol (SSH) from the Jump-Box, which has an IP address of 10.0.0.4. The access policies are in the table below:
 
 | Name       | Publicly Accessible | Allowed IP Addresses |
 |------------|---------------------|----------------------|
-| Jump Box   | Yes                 | 67.163.75.32         |
+| Jump-Box   | Yes                 | 67.163.75.32         |
 | Web-1      | No                  | 10.0.0.4             |
 | Web-2      | No                  | 10.0.0.4             |
 | Elk-Server | No                  | 10.0.0.4             |
