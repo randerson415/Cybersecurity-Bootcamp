@@ -82,7 +82,7 @@ These Beats allow us to collect the following information from each machine:
 
 ### Using the Playbook
 
-In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned, SSH into the control node and follow the steps below:
+In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned, SSH into it and follow the steps below:
 
 - Copy the Filebeat configuration file (filebeat-config.yml) and Metricbeat configuration file (metricbeat-confg.yml) to the /etc/ansible/files directory in the Ansible container.
 - Update the Filebeat and Metricbeat configuration files to include:
@@ -93,6 +93,5 @@ In order to use the playbook, you will need to have an Ansible control node alre
   - setup.kibana
     - host: “10.1.0.4:5601”
 - Copy the Filebeat playbook file (filebeat-playbook.yml) and Metricbeat playbook file (metricbeat-playbook.yml) to the /etc/ansible/roles directory in the Ansible container.
+- Update the /etc/ansible/hosts file for Ansible to run the playbooks on specific machines. The section titled "elk" specifies machines to install the ELK server on and the section titled "webservers" specifies machines to install Filebeat and Metricbeat on. Then, specify "elk" or "webservers" in the corresponding playbooks.
 - Run the Filebeat and Metricbeat playbooks, and then navigate to http://20.230.203.126:5601/app/kibana to confirm that the installation worked as expected.
-
-Update the hosts file in the /etc/ansible directory to make Ansible run the playbooks on specific machines. The section titled "elk" specifies machines to install the ELK-Server on and the section titled "webservers" specifies machines to install Filebeat and Metricbeat on. Then, specify "elk" or "webservers" in the corresponding playbooks.
